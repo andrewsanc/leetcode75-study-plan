@@ -15,8 +15,19 @@
 // Input: nums = [3,1,2,10,1]
 // Output: [3,4,6,16,17]
 
-// Solution #1
-function runningSum(nums) {
+// Solution #1 Brute Force - Space(O(n)), Time(O(n))
+function runningSumBrute(nums) {
   let runningSum = 0;
   return nums.map((num) => (runningSum += num));
+}
+
+// Solution #2 Optimal - Space(O(1)), Time(O(n))
+function runningSumOptimal(nums) {
+  let rollingSum = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    let summedNumber = nums[i] + rollingSum;
+    nums[i] = summedNumber;
+    rollingSum = summedNumber;
+  }
+  return nums;
 }
