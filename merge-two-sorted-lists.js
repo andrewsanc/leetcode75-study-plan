@@ -14,7 +14,7 @@
 // Input: list1 = [], list2 = [0]
 // Output: [0]
 
-// Solution #1 - Time(O(n + m)), Space(O(1))
+// Solution #1 Brute Force - Time(O(n + m)), Space(O(1))
 // Time - Time complexity is N+M where N is # of nodes in l1 and M is # of nodes in l2.
 // Space - Space complexity is constant(O(1)), since we are shifting pointers
 function mergeTwoLists(l1, l2) {
